@@ -4,7 +4,7 @@ from nbformat.v4 import new_notebook, new_markdown_cell, new_code_cell
 import os
 
 # Path to the project directory
-project_dir = "/home/ubuntu/telco_churn_project_en"
+project_dir = "."
 
 # Create a new notebook
 nb = new_notebook()
