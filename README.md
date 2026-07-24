@@ -8,6 +8,10 @@
 
 This project provides a professional-grade end-to-end data science solution for the **Customer Churn** problem in the telecommunications industry. Using a dataset of over 7,000 customers, we develop a predictive framework to identify high-risk individuals and provide actionable strategic recommendations to increase retention and lifetime value.
 
+### 📊 Data Source
+The dataset used in this project is the **Telco Customer Churn** dataset, originally provided by IBM and hosted on **Kaggle**. You can find the original data and documentation here:
+👉 [Kaggle - Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+
 The analysis covers the entire data lifecycle: from **Exploratory Data Analysis (EDA)** and **Feature Engineering** to **Advanced Predictive Modeling** and **Model Interpretability**.
 
 ## 🚀 Key Methodologies
