@@ -1,0 +1,38 @@
+======================================================================
+  IN-DEPTH EXPLORATORY DATA ANALYSIS (EDA) AND VISUALIZATIONS
+======================================================================
+
+📊 TARGET VARIABLE ANALYSIS (Churn)
+   - Churn distribution plot saved.
+
+📈 NUMERICAL VARIABLES ANALYSIS
+   - Distribution and boxplot for tenure saved.
+   - Distribution and boxplot for MonthlyCharges saved.
+   - Distribution and boxplot for TotalCharges saved.
+   - Distribution and boxplot for NumAdditionalServices saved.
+   - Distribution and boxplot for CostPerService saved.
+
+📊 CATEGORICAL VARIABLES VS CHURN ANALYSIS
+   - Count plot for MultipleLines_Yes vs Churn saved.
+   - Count plot for InternetService_Fiber optic vs Churn saved.
+   - Count plot for InternetService_No vs Churn saved.
+   - Count plot for OnlineSecurity_Yes vs Churn saved.
+   - Count plot for OnlineBackup_Yes vs Churn saved.
+   - Count plot for DeviceProtection_Yes vs Churn saved.
+   - Count plot for TechSupport_Yes vs Churn saved.
+   - Count plot for StreamingTV_Yes vs Churn saved.
+   - Count plot for StreamingMovies_Yes vs Churn saved.
+   - Count plot for Contract_One year vs Churn saved.
+   - Count plot for Contract_Two year vs Churn saved.
+   - Count plot for PaymentMethod_Credit card (automatic) vs Churn saved.
+   - Count plot for PaymentMethod_Electronic check vs Churn saved.
+   - Count plot for PaymentMethod_Mailed check vs Churn saved.
+
+📈 CORRELATION MATRIX
+   - Correlation Matrix saved.
+
+✅ IN-DEPTH EDA AND VISUALIZATIONS COMPLETED.
+
+======================================================================
+  IN-DEPTH EDA SCRIPT COMPLETED SUCCESSFULLY
+======================================================================

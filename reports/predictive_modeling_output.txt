@@ -1,0 +1,213 @@
+======================================================================
+  PREDICTIVE MODELING - TELCO CUSTOMER CHURN
+======================================================================
+
+📊 DATA DIMENSIONS FOR MODELING
+   X_train: (5634, 25)
+   X_test : (1409, 25)
+   y_train: (5634,)
+   y_test : (1409,)
+
+⚖️ HANDLING IMBALANCE WITH SMOTE
+   X_train (SMOTE): (8278, 25)
+   y_train (SMOTE): (8278,)
+   Churn Distribution (original):
+Churn
+0    73.46
+1    26.54
+Name: proportion, dtype: float64
+   Churn Distribution (SMOTE):
+Churn
+0    50.0
+1    50.0
+Name: proportion, dtype: float64
+
+🤖 DEFINING MACHINE LEARNING MODELS
+
+🚀 TRAINING AND EVALUATING MODELS...
+
+--- Logistic Regression ---
+   Accuracy : 0.7523
+   Precision: 0.5256
+   Recall   : 0.6872
+   F1-Score : 0.5956
+   ROC-AUC  : 0.8289
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.78      0.82      1035
+           1       0.53      0.69      0.60       374
+
+    accuracy                           0.75      1409
+   macro avg       0.70      0.73      0.71      1409
+weighted avg       0.78      0.75      0.76      1409
+
+   Confusion Matrix:
+[[803 232]
+ [117 257]]
+
+--- Gaussian Naive Bayes ---
+   Accuracy : 0.7232
+   Precision: 0.4868
+   Recall   : 0.7861
+   F1-Score : 0.6012
+   ROC-AUC  : 0.8212
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.70      0.79      1035
+           1       0.49      0.79      0.60       374
+
+    accuracy                           0.72      1409
+   macro avg       0.69      0.74      0.69      1409
+weighted avg       0.79      0.72      0.74      1409
+
+   Confusion Matrix:
+[[725 310]
+ [ 80 294]]
+
+--- K-Nearest Neighbors ---
+   Accuracy : 0.7097
+   Precision: 0.4687
+   Recall   : 0.7005
+   F1-Score : 0.5616
+   ROC-AUC  : 0.7823
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.71      0.78      1035
+           1       0.47      0.70      0.56       374
+
+    accuracy                           0.71      1409
+   macro avg       0.67      0.71      0.67      1409
+weighted avg       0.76      0.71      0.72      1409
+
+   Confusion Matrix:
+[[738 297]
+ [112 262]]
+
+--- Support Vector Machine ---
+   Accuracy : 0.7580
+   Precision: 0.5339
+   Recall   : 0.6952
+   F1-Score : 0.6039
+   ROC-AUC  : 0.8239
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.78      0.83      1035
+           1       0.53      0.70      0.60       374
+
+    accuracy                           0.76      1409
+   macro avg       0.71      0.74      0.71      1409
+weighted avg       0.79      0.76      0.77      1409
+
+   Confusion Matrix:
+[[808 227]
+ [114 260]]
+
+--- Random Forest ---
+   Accuracy : 0.7658
+   Precision: 0.5502
+   Recall   : 0.6444
+   F1-Score : 0.5936
+   ROC-AUC  : 0.8192
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.86      0.81      0.84      1035
+           1       0.55      0.64      0.59       374
+
+    accuracy                           0.77      1409
+   macro avg       0.71      0.73      0.71      1409
+weighted avg       0.78      0.77      0.77      1409
+
+   Confusion Matrix:
+[[838 197]
+ [133 241]]
+
+--- Gradient Boosting ---
+   Accuracy : 0.7459
+   Precision: 0.5147
+   Recall   : 0.7487
+   F1-Score : 0.6100
+   ROC-AUC  : 0.8371
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.74      0.81      1035
+           1       0.51      0.75      0.61       374
+
+    accuracy                           0.75      1409
+   macro avg       0.70      0.75      0.71      1409
+weighted avg       0.79      0.75      0.76      1409
+
+   Confusion Matrix:
+[[771 264]
+ [ 94 280]]
+
+--- XGBoost ---
+   Accuracy : 0.7601
+   Precision: 0.5400
+   Recall   : 0.6497
+   F1-Score : 0.5898
+   ROC-AUC  : 0.8064
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.86      0.80      0.83      1035
+           1       0.54      0.65      0.59       374
+
+    accuracy                           0.76      1409
+   macro avg       0.70      0.72      0.71      1409
+weighted avg       0.78      0.76      0.77      1409
+
+   Confusion Matrix:
+[[828 207]
+ [131 243]]
+
+--- LightGBM ---
+[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+[LightGBM] [Info] Number of positive: 4139, number of negative: 4139
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000908 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 1067
+[LightGBM] [Info] Number of data points in the train set: 8278, number of used features: 25
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+   Accuracy : 0.7622
+   Precision: 0.5404
+   Recall   : 0.6979
+   F1-Score : 0.6091
+   ROC-AUC  : 0.8262
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.79      0.83      1035
+           1       0.54      0.70      0.61       374
+
+    accuracy                           0.76      1409
+   macro avg       0.71      0.74      0.72      1409
+weighted avg       0.79      0.76      0.77      1409
+
+   Confusion Matrix:
+[[813 222]
+ [113 261]]
+
+✅ MODEL TRAINING AND EVALUATION COMPLETED.
+
+🏆 MODEL RESULTS SUMMARY
+                        Accuracy  Precision    Recall  F1-Score   ROC-AUC
+Gradient Boosting       0.745919   0.514706  0.748663  0.610022  0.837087
+Logistic Regression     0.752307   0.525562  0.687166  0.595597  0.828921
+LightGBM                0.762243   0.540373  0.697861  0.609102  0.826181
+Support Vector Machine  0.757984   0.533881  0.695187  0.603949  0.823948
+Gaussian Naive Bayes    0.723208   0.486755  0.786096  0.601227  0.821179
+Random Forest           0.765791   0.550228  0.644385  0.593596  0.819198
+XGBoost                 0.760114   0.540000  0.649733  0.589806  0.806409
+K-Nearest Neighbors     0.709723   0.468694  0.700535  0.561629  0.782306
+   - Model performance summary saved to 'reports/model_performance_summary.csv'.
+
+======================================================================
+  PREDICTIVE MODELING SCRIPT COMPLETED SUCCESSFULLY
+======================================================================

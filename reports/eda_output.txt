@@ -1,0 +1,95 @@
+======================================================================
+  INITIAL EXPLORATORY ANALYSIS - TELCO CUSTOMER CHURN
+======================================================================
+
+📊 DATASET DIMENSIONS
+   Rows     : 7,043
+   Columns  : 21
+
+📋 VARIABLE TYPES
+customerID              str
+gender                  str
+SeniorCitizen         int64
+Partner                 str
+Dependents              str
+tenure                int64
+PhoneService            str
+MultipleLines           str
+InternetService         str
+OnlineSecurity          str
+OnlineBackup            str
+DeviceProtection        str
+TechSupport             str
+StreamingTV             str
+StreamingMovies         str
+Contract                str
+PaperlessBilling        str
+PaymentMethod           str
+MonthlyCharges      float64
+TotalCharges            str
+Churn                   str
+
+🔍 FIRST 5 ROWS
+   customerID  gender  SeniorCitizen Partner Dependents  tenure PhoneService     MultipleLines InternetService OnlineSecurity OnlineBackup DeviceProtection TechSupport StreamingTV StreamingMovies        Contract PaperlessBilling              PaymentMethod  MonthlyCharges TotalCharges Churn
+0  7590-VHVEG  Female              0     Yes         No       1           No  No phone service             DSL             No          Yes               No          No          No              No  Month-to-month              Yes           Electronic check           29.85        29.85    No
+1  5575-GNVDE    Male              0      No         No      34          Yes                No             DSL            Yes           No              Yes          No          No              No        One year               No               Mailed check           56.95       1889.5    No
+2  3668-QPYBK    Male              0      No         No       2          Yes                No             DSL            Yes          Yes               No          No          No              No  Month-to-month              Yes               Mailed check           53.85       108.15   Yes
+3  7795-CFOCW    Male              0      No         No      45           No  No phone service             DSL            Yes           No              Yes         Yes          No              No        One year               No  Bank transfer (automatic)           42.30      1840.75    No
+4  9237-HQITU  Female              0      No         No       2          Yes                No     Fiber optic             No           No               No          No          No              No  Month-to-month              Yes           Electronic check           70.70       151.65   Yes
+
+📈 DESCRIPTIVE STATISTICS - NUMERIC VARIABLES
+       SeniorCitizen       tenure  MonthlyCharges
+count    7043.000000  7043.000000     7043.000000
+mean        0.162147    32.371149       64.761692
+std         0.368612    24.559481       30.090047
+min         0.000000     0.000000       18.250000
+25%         0.000000     9.000000       35.500000
+50%         0.000000    29.000000       70.350000
+75%         0.000000    55.000000       89.850000
+max         1.000000    72.000000      118.750000
+
+❓ MISSING VALUES
+Empty DataFrame
+Columns: [Missing, Percentage (%)]
+Index: []
+   No missing values detected (check TotalCharges)
+
+🎯 TARGET VARIABLE DISTRIBUTION (Churn)
+   No Churn  : 5,174 (73.5%)
+   Churn     : 1,869 (26.5%)
+   Imbalance : 2.8:1
+
+📌 CATEGORICAL VARIABLES - UNIQUE VALUES
+   customerID                    : 7043 unique → ['7590-VHVEG', '5575-GNVDE', '3668-QPYBK', '7795-CFOCW', '9237-HQITU', '9305-CDSKC']
+   gender                        : 2 unique → ['Female', 'Male']
+   Partner                       : 2 unique → ['Yes', 'No']
+   Dependents                    : 2 unique → ['No', 'Yes']
+   PhoneService                  : 2 unique → ['No', 'Yes']
+   MultipleLines                 : 3 unique → ['No phone service', 'No', 'Yes']
+   InternetService               : 3 unique → ['DSL', 'Fiber optic', 'No']
+   OnlineSecurity                : 3 unique → ['No', 'Yes', 'No internet service']
+   OnlineBackup                  : 3 unique → ['Yes', 'No', 'No internet service']
+   DeviceProtection              : 3 unique → ['No', 'Yes', 'No internet service']
+   TechSupport                   : 3 unique → ['No', 'Yes', 'No internet service']
+   StreamingTV                   : 3 unique → ['No', 'Yes', 'No internet service']
+   StreamingMovies               : 3 unique → ['No', 'Yes', 'No internet service']
+   Contract                      : 3 unique → ['Month-to-month', 'One year', 'Two year']
+   PaperlessBilling              : 2 unique → ['Yes', 'No']
+   PaymentMethod                 : 4 unique → ['Electronic check', 'Mailed check', 'Bank transfer (automatic)', 'Credit card (automatic)']
+   TotalCharges                  : 6531 unique → ['29.85', '1889.5', '108.15', '1840.75', '151.65', '820.5']
+   Churn                         : 2 unique → ['No', 'Yes']
+
+💰 TotalCharges ANALYSIS
+   Original type: str
+   Values with blank spaces: 11
+
+✅ EXECUTIVE SUMMARY
+   n_rows: 7043
+   n_cols: 21
+   churn_rate: 26.54
+   cat_cols: 18
+   num_cols: 3
+
+======================================================================
+  INITIAL EDA COMPLETED SUCCESSFULLY
+======================================================================

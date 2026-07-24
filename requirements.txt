@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+shap
+imbalanced-learn
+matplotlib
+seaborn
+nbformat
+kaleido # For plotly image export if used, though not explicitly in scripts, good practice

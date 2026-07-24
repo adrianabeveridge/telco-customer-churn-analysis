@@ -1,0 +1,25 @@
+======================================================================
+  MODEL EVALUATION, FEATURE IMPORTANCE, AND INTERPRETABILITY
+======================================================================
+
+🤖 TRAINING THE BEST MODEL (Gradient Boosting) FOR ANALYSIS...
+   - Gradient Boosting model trained.
+
+📈 ROC CURVE AND AUC
+   - ROC curve saved.
+
+📉 CONFUSION MATRIX
+   - Confusion Matrix saved.
+
+💡 FEATURE IMPORTANCE (MODEL-BASED)
+   - Feature Importance plot saved.
+
+🧠 INTERPRETABILITY WITH SHAP
+   - Global Feature Importance (SHAP) plot saved.
+   - Feature Impact and Direction (SHAP) plot saved.
+
+✅ MODEL EVALUATION, FEATURE IMPORTANCE, AND INTERPRETABILITY COMPLETED.
+
+======================================================================
+  MODEL EVALUATION AND INTERPRETABILITY SCRIPT COMPLETED SUCCESSFULLY
+======================================================================
