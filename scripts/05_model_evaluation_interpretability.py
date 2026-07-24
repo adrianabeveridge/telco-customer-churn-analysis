@@ -28,7 +28,7 @@ plt.rcParams["ytick.labelsize"] = 10
 plt.rcParams["legend.fontsize"] = 10
 
 # ── Load Processed Data ─────────────────────────────────────────────────────
-df = pd.read_csv("/home/ubuntu/telco_churn_project_en/data/processed_telco_churn.csv")
+df = pd.read_csv("data/processed_telco_churn.csv")
 
 print("=" * 70)
 print("  MODEL EVALUATION, FEATURE IMPORTANCE, AND INTERPRETABILITY")
@@ -62,7 +62,7 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.title('ROC Curve - Gradient Boosting Classifier')
 plt.legend(loc="lower right")
-plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/roc_curve.png")
+plt.savefig("visualizations/roc_curve.png")
 plt.close()
 print("   - ROC curve saved.")
 
@@ -74,7 +74,7 @@ cm = confusion_matrix(y_test, y_pred)
 plt.figure(figsize=(8, 6))
 ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["No Churn", "Churn"]).plot(cmap=plt.cm.Blues)
 plt.title("Confusion Matrix - Gradient Boosting Classifier")
-plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/confusion_matrix.png")
+plt.savefig("visualizations/confusion_matrix.png")
 plt.close()
 print("   - Confusion Matrix saved.")
 
@@ -90,7 +90,7 @@ if hasattr(best_model, "feature_importances_"):
     plt.xlabel("Importance")
     plt.ylabel("Feature")
     plt.tight_layout()
-    plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/feature_importance.png")
+    plt.savefig("visualizations/feature_importance.png")
     plt.close()
     print("   - Feature Importance plot saved.")
 else:
@@ -109,7 +109,7 @@ plt.figure(figsize=(10, 8))
 shap.summary_plot(shap_values, sample_X_test, plot_type="bar", show=False)
 plt.title("Global Feature Importance (SHAP)")
 plt.tight_layout()
-plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/shap_summary_bar.png")
+plt.savefig("visualizations/shap_summary_bar.png")
 plt.close()
 print("   - Global Feature Importance (SHAP) plot saved.")
 
@@ -118,7 +118,7 @@ plt.figure(figsize=(10, 8))
 shap.summary_plot(shap_values, sample_X_test, show=False)
 plt.title("Feature Impact and Direction (SHAP)")
 plt.tight_layout()
-plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/shap_summary_beeswarm.png")
+plt.savefig("visualizations/shap_summary_beeswarm.png")
 plt.close()
 print("   - Feature Impact and Direction (SHAP) plot saved.")
 

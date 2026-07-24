@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ── Load Data ───────────────────────────────────────────────────────────────
-df = pd.read_csv('/home/ubuntu/telco_churn_project_en/data/WA_Fn-UseC_-Telco-Customer-Churn.csv')
+df = pd.read_csv('data/WA_Fn-UseC_-Telco-Customer-Churn.csv')
 
 print("=" * 70)
 print("  INITIAL EXPLORATORY ANALYSIS - TELCO CUSTOMER CHURN")

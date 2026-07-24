@@ -21,7 +21,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ── Load Processed Data ─────────────────────────────────────────────────────
-df = pd.read_csv("/home/ubuntu/telco_churn_project_en/data/processed_telco_churn.csv")
+df = pd.read_csv("data/processed_telco_churn.csv")
 
 print("=" * 70)
 print("  PREDICTIVE MODELING - TELCO CUSTOMER CHURN")
@@ -105,7 +105,7 @@ results_df = pd.DataFrame(results).T.sort_values(by="ROC-AUC", ascending=False)
 print(results_df.to_string())
 
 # Save results for later use
-results_df.to_csv("/home/ubuntu/telco_churn_project_en/reports/model_performance_summary.csv")
+results_df.to_csv("reports/model_performance_summary.csv")
 print("   - Model performance summary saved to 'reports/model_performance_summary.csv'.")
 
 print("\n" + "=" * 70)

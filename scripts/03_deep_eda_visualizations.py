@@ -24,7 +24,7 @@ plt.rcParams["ytick.labelsize"] = 10
 plt.rcParams["legend.fontsize"] = 10
 
 # ── Load Processed Data ─────────────────────────────────────────────────────
-df = pd.read_csv("/home/ubuntu/telco_churn_project_en/data/processed_telco_churn.csv")
+df = pd.read_csv("data/processed_telco_churn.csv")
 
 print("=" * 70)
 print("  IN-DEPTH EXPLORATORY DATA ANALYSIS (EDA) AND VISUALIZATIONS")
@@ -38,7 +38,7 @@ plt.title("Churn Distribution")
 plt.xlabel("Churn (0=No, 1=Yes)")
 plt.ylabel("Count")
 plt.xticks([0, 1], ["No Churn", "Churn"])
-plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/churn_distribution.png")
+plt.savefig("visualizations/churn_distribution.png")
 plt.close()
 print("   - Churn distribution plot saved.")
 
@@ -61,7 +61,7 @@ for col in numeric_cols:
     plt.ylabel(col)
     plt.xticks([0, 1], ["No Churn", "Churn"])
     plt.tight_layout()
-    plt.savefig(f"/home/ubuntu/telco_churn_project_en/visualizations/{col}_distribution_churn.png")
+    plt.savefig(f"visualizations/{col}_distribution_churn.png")
     plt.close()
     print(f"   - Distribution and boxplot for {col} saved.")
 
@@ -80,7 +80,7 @@ for col in categorical_cols:
     plt.ylabel("Count")
     plt.legend(title="Churn", labels=["No", "Yes"])
     plt.tight_layout()
-    plt.savefig(f"/home/ubuntu/telco_churn_project_en/visualizations/{col}_churn_countplot.png")
+    plt.savefig(f"visualizations/{col}_churn_countplot.png")
     plt.close()
     print(f"   - Count plot for {col} vs Churn saved.")
 
@@ -90,7 +90,7 @@ plt.figure(figsize=(14, 10))
 sns.heatmap(df.corr(numeric_only=True), annot=True, cmap="coolwarm", fmt=".2f")
 plt.title("Correlation Matrix of Numerical Variables")
 plt.tight_layout()
-plt.savefig("/home/ubuntu/telco_churn_project_en/visualizations/correlation_matrix.png")
+plt.savefig("visualizations/correlation_matrix.png")
 plt.close()
 print("   - Correlation Matrix saved.")
 

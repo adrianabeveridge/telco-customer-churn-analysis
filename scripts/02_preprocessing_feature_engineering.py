@@ -15,7 +15,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ── Load Data ───────────────────────────────────────────────────────────────
-df = pd.read_csv("/home/ubuntu/telco_churn_project_en/data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 print("=" * 70)
 print("  DATA CLEANING, PREPROCESSING, AND FEATURE ENGINEERING")
@@ -121,5 +121,5 @@ print("  PREPROCESSING SCRIPT COMPLETED SUCCESSFULLY")
 print("=" * 70)
 
 # Save the processed DataFrame for later use
-df.to_csv("/home/ubuntu/telco_churn_project_en/data/processed_telco_churn.csv", index=False)
+df.to_csv("data/processed_telco_churn.csv", index=False)
 print("   - Processed DataFrame saved to 'data/processed_telco_churn.csv'.")
